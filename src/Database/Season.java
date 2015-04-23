@@ -1,6 +1,5 @@
 package Database;
 
-
-public class Show {
+public class Season {
 
 }
