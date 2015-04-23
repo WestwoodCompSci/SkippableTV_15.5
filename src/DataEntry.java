@@ -4,7 +4,6 @@ import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
-import javax.json.stream;
 
 public class DataEntry {
 
@@ -29,11 +28,17 @@ public class DataEntry {
 	
 	public void parse()
 	{
+		try{
+			
 		 URL url = new URL("http://api.tvmaze.com/search/shows?q=sherlock");
-		 try (InputStream is = url.openStream()
+		 
+		 try (InputStream is = url.openStream())
 				 {
 			 		
 				 }
+		}catch(Exception e){
+			
+		}
 	
 	}
 }
