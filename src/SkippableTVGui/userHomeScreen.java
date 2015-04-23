@@ -1,8 +1,7 @@
 package SkippableTVGui;
-
 import java.awt.Dimension;
-
 import javax.swing.JFrame;
+
 
 public class userHomeScreen {
 	private JFrame myFrame;
@@ -15,5 +14,8 @@ public class userHomeScreen {
 		
 		myFrame.pack();
 		myFrame.setVisible(true);	
+		
+		//link to homeScreen (via logout)
 	}
+	
 }
