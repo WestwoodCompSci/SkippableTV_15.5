@@ -6,11 +6,11 @@ public class Show {
 	
 	//FIELDS
 	//---------------------------------------------------------------
-	private String myName;
-	private String myInfo;
-	private int myNumOfSeasons;
-	private List<String> myEpisodes;
-	private int mySeason;
+	private static String myName;
+	private static String myInfo;
+	private static int myNumOfSeasons;
+	private static List<String> myEpisodes;
+	private static int mySeason;
 	
 	//CONSTRUCTORS
 	//----------------------------------------------------------------
@@ -47,9 +47,9 @@ public class Show {
 		return myEpisodes;
 	}
 	
-	public List<String> getEpisodes(int season)
+	public List<String> getEpisodes(int Season)
 	{
-		
+		return mySeason;
 	}
 	
 	public List<String> getComments(String username)
