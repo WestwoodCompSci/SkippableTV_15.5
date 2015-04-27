@@ -14,7 +14,7 @@ Tony Batu Noelle Kavya
 Batu Tony Michelle
 
 ##Database
-Cody Tommy David
+Cody Tommy David Noelle Kavya
 
 ##Encryption
 Jimmy Ben Arnav
