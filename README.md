@@ -23,7 +23,7 @@ Jimmy Ben Arnav
 Anya Tatiana
 
 ##Data Entry
-Shabharyar Aman
+Shaharyar Aman
 
 </br>
 </br>
