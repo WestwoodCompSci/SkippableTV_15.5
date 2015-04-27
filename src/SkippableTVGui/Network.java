@@ -10,14 +10,18 @@ import java.util.List;
 public class Network {
 
 	public static boolean connectAuthentication(String username, String password){
-		List<String> response = connect("");
+		username = username.replace(" ", "%20");
+		String url = "http://localhost:8080/SkippableTVServer/Server?username=" + username + "&password=" + password+"&action=auth";
+		List<String> response = connect(url);
 		
 		return !(response.get(0).equals("ERROR: CONNECTION"));
 		
 	}
 	
 	public static boolean connectAddUser(String username, String password){
-		List<String> response = connect("");
+		username = username.replace(" ", "%20");
+		String url = "http://localhost:8080/SkippableTVServer/Server?username=" + username + "&password=" + password+"&action=add";
+		List<String> response = connect(url);
 		
 		return !(response.get(0).equals("ERROR: CONNECTION"));
 	}
@@ -31,13 +35,19 @@ public class Network {
 		URL u = null;
 		List<String> ls = new ArrayList<String>();
 		try {
-			u = new URL("Place url here");
+			u = new URL(url);
 			URLConnection urlConnection = u.openConnection();
 			BufferedReader in = new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
 			
-			while(in.readLine() != null){
-				ls.add(in.readLine());
+			String line;
+			
+			while((line = in.readLine()) != null){
+				ls.add(line);
 			}
+			
+			in.close();
+			
+			System.out.println(ls);
 			
 			return ls;
 		} catch (Exception e) {
