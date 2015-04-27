@@ -30,9 +30,9 @@ public class Databases
 			return User();
 		}
 	}
-	public String getShow(String name)
+	public Show getShow(String name)
 	{
-		return name;
+		return myShows;
 	}
 	
 	
