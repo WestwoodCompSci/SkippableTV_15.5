@@ -1,5 +1,7 @@
 package Database;
 
+import java.util.List;
+
 public class Show {
 	
 	//FIELDS
@@ -9,21 +11,27 @@ public class Show {
 	private int myNumOfSeasons;
 	private List<String> myEpisodes;
 	private int mySeason;
-	public String getName()
 	
 	//CONSTRUCTORS
 	//----------------------------------------------------------------
-	public Show()
+	public Show(String Name, String Info, int NumOfSeasons, List<String> Episodes, int Season)
 	{
+		myName = Name;
+		myInfo = Info;
+		myNumOfSeasons = NumOfSeasons;
+		myEpisodes = Episodes;
+		mySeason = Season;
 		
 	}
 	//METHODS
 	//----------------------------------------------------------------
 	
+	public String getName()
 	{
 		return myName;
 	}
 	
+
 	public String getInfo()
 	{
 		return myInfo;
