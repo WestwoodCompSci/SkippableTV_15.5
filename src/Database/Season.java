@@ -9,49 +9,50 @@ public class Season {
 	private int length;
 	private int numOfEpisodes;
 	
-		public void setComments()
+		
+		public  void setSummary(String sum)
 		{
-			
+			summary = sum;
 		}
-		public void setSummary()
+		public  void setSeasonLength(int seasonLength)
 		{
+			length = seasonLength;
 		}
-		public void setSeasonLength()
+		public  void setNumOfEpisodes(int num)
 		{
+			numOfEpisodes = num;
 		}
-		public void setNumOfEpisodes()
-		{
-		}
-		public int getSeason(String show)
+		public  int getSeason(String show)
 		{
 		
 		}
 		
-		public String getInfo()
+		public  String getInfo()
 		{
 			return summary;
 		}
 		
 		
-		public List<String> getEpisodes()
+		public static List<String> getEpisodes()
 		{
-		//	return Show.getEpisodes();
+			return Show.getEpisodes();
 		}
 		
-		public List<String> getEpisodes(int season)
-		{
-			
-		}
-		
-		public List<String> getComments(String username)
+		public static List<String> getEpisodes(int season)
 		{
 			
 		}
 		
-		public int getProgress(String username)
+		public static List<String> getComments(String username)
+		{
+			List<String> L = new List<String>();
+			return L;
+		}
+		
+		public static int getProgress(String username)
 		{
 			
-			
+			return 1;
 		}
 	}
 	
