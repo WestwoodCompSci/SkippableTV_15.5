@@ -25,9 +25,9 @@ public class Databases
 	}
 	public String getUser(String Username, String password)
 	{
-		if(User.getUsername=Username||	User.getpasword=Password)
+		if(User.getUsername=Username &&	User.getpassword=Password)
 		{
-			return User;
+			return User();
 		}
 	}
 	public String getShow(String name)
