@@ -23,7 +23,7 @@ public class Databases
 		return Username;
 
 	}
-	public String getUser(String Username, String password)
+	public User getUser(String Username, String password)
 	{
 		if(User.getUsername()==Username &&	User.getPassword() ==Password)
 		{
