@@ -1,9 +1,14 @@
 import java.io.DataInputStream;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
+
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+
 
 public class DataEntry {
 
@@ -34,6 +39,9 @@ public class DataEntry {
 		 
 		 try (InputStream is = url.openStream())
 				 {
+			 		FileReader reader = new FileReader("H:\\CompSci3\\SkippableTV_15.5\\sherlock.json");
+			 		JSONParser parser = new JSONParser();
+			 		JSONObject jsonObj = (JSONObject) parser.parse(reader);
 			 		
 				 }
 		}catch(Exception e){

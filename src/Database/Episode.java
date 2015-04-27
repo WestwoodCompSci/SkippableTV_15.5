@@ -5,11 +5,11 @@ import java.util.List;
 public class Episode {
 	
 
-	private String episodeName;
-	private String episodeInfo;
-	private int skippability; 
-	private List<String> episodeComments; 
-	private int numEpisode;
+	private static String episodeName;
+	private static String episodeInfo;
+	private static int skippability; 
+	private static List<String> episodeComments; 
+	private static int numEpisode;
 
 		public Episode()
 		{
@@ -20,28 +20,28 @@ public class Episode {
 			numEpisode = 0;
 		}
 	
-	public String getEpisodeName()
+	public static String getEpisodeName()
 	{
 		return episodeName;
 		
 	}
 	
-	public String getEpisodeInfo()
+	public  static String getEpisodeInfo()
 	{
 		return episodeInfo;
 	}
 	
-	public int getSkippability()
+	public static int getSkippability()
 	{
 		return skippability;
 	}
 	
-	public List<String> episodeComments()
+	public static List<String> getEpisodeComments()
 	{
 		return episodeComments;
 	}
 	
-	public int getNumEpisode()
+	public static int getNumEpisode()
 	{
 		return numEpisode;
 	}
@@ -49,25 +49,30 @@ public class Episode {
 	public void setNumEpisode( int x)
 	{
 		numEpisode = x;
+		//add to text file
 	}
 	public void setEpisodeName( String x)
 	{
 		episodeName = x;
+		//add to text file
 	}
 	
 	public void setEpisodeInfo( String x)
 	{
 		episodeInfo = x;
+		//add to text file
 	}
 
 	public void setSkippability( int x)
 	{
 		skippability = x;
+		//add to text file
 	}
 	
 	public void setEpisodeComments( List<String> x)
 	{
 		episodeComments = x;
+		//add to text file 
 	}
 
 }

@@ -4,42 +4,69 @@ import java.util.List;
 
 public class User {
 
-	private String name;
-	private String password;
-	private List<Show> myShows;
-	private String email;
+	private static  String name;
+	private static  String password;
+	private  static List<Show> myShows;
+	private static  String email;
 	
 	public User()
 	{
-		
+		name = null;
+		password = null;
+		myShows = null;
+		email = null;
 	}
 	
-	public String addPassword(String password)
+	public static String addPassword(String password)
 	{
 		String thing = password;
 		//encrypt thing
 		return thing;
-		
 	}
 	
-	public String addUsername(String username)
+	public static String addUsername(String username)
 	{
 		String thing = username;
 		//encrypt thing
 		return thing;
 	}
 	
-	public String addUserEmail(String email)
+	public static  String addUserEmail(String email)
 	{
 		String thing = email;
 		//encrypt email
+		//add to text file
 		return thing;
 	}
 	
-	public String addShow(Show show)
+	public static  String addShow(Show show)
 	{
-		
+		String thing = show.getName();
+		//add show to text file
+		return thing;
 	}
+	
+	public static  List<Show> getShows(){
+		return myShows;
+	}
+	
+	public static  String getEmail()
+	{
+		return email;
+	}
+	
+	public static  String getUsername()
+	{
+		return name;
+	}
+	
+	public static  String getPassword()
+	{
+		return password;
+	}
+	
+	
+	
 	
 	
 }
