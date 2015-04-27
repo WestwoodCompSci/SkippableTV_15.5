@@ -11,7 +11,10 @@ public class User {
 	
 	public User()
 	{
-		
+		name = null;
+		password = null;
+		myShows = null;
+		email = null;
 	}
 	
 	public String addPassword(String password)
@@ -19,7 +22,6 @@ public class User {
 		String thing = password;
 		//encrypt thing
 		return thing;
-		
 	}
 	
 	public String addUsername(String username)
@@ -33,13 +35,33 @@ public class User {
 	{
 		String thing = email;
 		//encrypt email
+		//add to text file
 		return thing;
 	}
 	
 	public String addShow(Show show)
 	{
-		
+		String thing = show.getName();
+		//add show to text file
+		return thing;
 	}
+	
+	public List<Show> getShows(){
+		return myShows;
+	}
+	
+	public String getEmail()
+	{
+		return email;
+	}
+	
+	public String getUsername()
+	{
+		return name;
+	}
+	
+	
+	
 	
 	
 }
