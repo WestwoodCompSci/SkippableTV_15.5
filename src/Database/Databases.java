@@ -23,11 +23,12 @@ public class Databases
 		return Username;
 
 	}
-	
-
 	public String getUser(String Username, String password)
 	{
-		return Username;
+		if(User.getUsername=Username||	User.getpasword=Password)
+		{
+			return User;
+		}
 	}
 	public String getShow(String name)
 	{
