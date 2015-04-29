@@ -50,7 +50,8 @@ public class DataEntry {
 			 		seasons.add((Integer) jsonObj.get("season"));
 			 		for(int i=0; i<) 	
 				 }
-		}catch(Exception e){
+		}
+		catch(Exception e){
 			
 		}
 	
