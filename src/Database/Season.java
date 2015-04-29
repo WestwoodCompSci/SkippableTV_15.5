@@ -1,13 +1,16 @@
 package Database;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Season {
 
 	private List<String> comments;
+	private static List<Episode> episodes;
 	private String summary;
 	private int length;
 	private int numOfEpisodes;
+	private static int seasonNum;
 	
 		
 		public  void setSummary(String sum)
@@ -22,9 +25,15 @@ public class Season {
 		{
 			numOfEpisodes = num;
 		}
-		public  int getSeason(String show)
-		{
 		
+		public void setSeasonNum(int num)
+		{
+			seasonNum = num;
+		}
+		
+		public void setListOfEpisodes(List<Episode> thing)
+		{
+			episodes = thing;
 		}
 		
 		public  String getInfo()
@@ -33,19 +42,15 @@ public class Season {
 		}
 		
 		
-		public static List<String> getEpisodes()
+		public static List<Episode> getEpisodes()
 		{
-			return Show.getEpisodes();
+			return episodes;
 		}
 		
-		public static List<String> getEpisodes(int season)
-		{
-			
-		}
 		
 		public static List<String> getComments(String username)
 		{
-			List<String> L = new List<String>();
+			List<String> L = new ArrayList<String>();
 			return L;
 		}
 		
