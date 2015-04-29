@@ -36,10 +36,7 @@ public class Episode {
 		return skippability;
 	}
 	
-	public static List<String> getEpisodeComments()
-	{
-		return episodeComments;
-	}
+
 	
 	public static int getNumEpisode()
 	{
@@ -69,10 +66,5 @@ public class Episode {
 		//add to text file
 	}
 	
-	public void setEpisodeComments( List<String> x)
-	{
-		episodeComments = x;
-		//add to text file 
-	}
 
 }
