@@ -8,7 +8,6 @@ public class Episode {
 	private static String episodeName;
 	private static String episodeInfo;
 	private static int skippability; 
-	private static List<String> episodeComments; 
 	private static int numEpisode;
 
 		public Episode()
@@ -16,7 +15,6 @@ public class Episode {
 			episodeName = "";
 			episodeInfo = "";
 			skippability = 0;
-			episodeComments = null;
 			numEpisode = 0;
 		}
 	
