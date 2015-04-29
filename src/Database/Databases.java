@@ -17,12 +17,10 @@ public class Databases
 	public String lookupPassword(String Password)
 	{
 		return Password;
-		
 	}
 	public String lookupUsername(String Username)
 	{
 		return Username;
-
 	}
 	public User getUser(String Username, String password)
 	{
