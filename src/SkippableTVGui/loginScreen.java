@@ -92,6 +92,7 @@ public class loginScreen {
 		
 		box.add(Box.createVerticalStrut(15));
 		
+		
 		JButton login = new JButton("Login");
 		box.add(login);
 		box.add(Box.createVerticalStrut(15));
