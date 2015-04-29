@@ -10,13 +10,16 @@ import java.util.List;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
+import Database.Season;
+import Database.Show;
+
 
 public class DataEntry {
 
 	public void urlConnection()
 	{
 		try{
-		URL url = new URL("http://api.tvmaze.com/search/shows?q=sherlock");
+		URL url = new URL("http://api.tvmaze.com/singlesearch/shows?q=sherlock&embed=episodes");
 		URLConnection apiConnection = url.openConnection();
 		DataInputStream dis = new DataInputStream(apiConnection.getInputStream());
 	      String inputLine;
@@ -36,7 +39,7 @@ public class DataEntry {
 	{
 		try{
 			
-		 URL url = new URL("http://api.tvmaze.com/search/shows?q=sherlock");
+		 URL url = new URL("http://api.tvmaze.com/singlesearch/shows?q=sherlock&embed=episodes");
 		 
 		 try (InputStream is = url.openStream())
 				 {
@@ -44,11 +47,20 @@ public class DataEntry {
 			 		JSONParser parser = new JSONParser();
 			 		JSONObject jsonObj = (JSONObject) parser.parse(reader);
 			 		String showname = (String) jsonObj.get("epguide_name");
-			 		//update database class
+			 		Show.setName(showname);
 			 		int numofseasons;
+			 		int numofeps=0;
 			 		List<Integer> seasons = null;
 			 		seasons.add((Integer) jsonObj.get("season"));
-			 		for(int i=0; i<) 	
+			 		for(int i=0; i<seasons.size(); i++)
+			 		{
+			 			numofeps++;
+			 		}
+			 		numofseasons = seasons.get(seasons.size());
+			 		Show.setNumofSeasons(numofseasons);
+			 		Season.setNumofEps(numofeps);
+			 		List<String> epnames = null; 
+			 		epnames.add((String) jsonObj.get("name")); 
 				 }
 		}catch(Exception e){
 			

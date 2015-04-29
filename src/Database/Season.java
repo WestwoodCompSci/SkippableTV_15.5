@@ -59,6 +59,10 @@ public class Season {
 			
 			return 1;
 		}
+		public static void setNumofEps(int numofeps) {
+			// TODO Auto-generated method stub
+			
+		}
 	}
 	
 	
