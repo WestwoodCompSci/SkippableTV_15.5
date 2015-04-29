@@ -12,7 +12,7 @@ public class Show {
 	private static List<String> myEpisodes;
 	private static int mySeason;
 	private static List<String> myComments;
-	private static String myShow;
+	
 	//CONSTRUCTORS
 	//----------------------------------------------------------------
 	public Show(String Name, String Info, int NumOfSeasons, List<String> Episodes, int Season, List<String> Comments)
@@ -23,15 +23,14 @@ public class Show {
 		myEpisodes = Episodes;
 		mySeason = Season;
 		myComments = Comments;
-		myShow = Show;
 		
 	}
 	//METHODS
 	//----------------------------------------------------------------
 	
-	public String getShow( String Name)
+	public Show getShow( String Name)
 	{
-		return myShow;
+		//parses through the text file looking for the name of a show
 	}
 	
 	public String getName()

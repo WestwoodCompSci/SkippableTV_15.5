@@ -27,8 +27,8 @@ public class Databases
 		if(User.getUsername()==Username &&	User.getPassword() ==Password)
 		{
 			user=new User();
-			user.addUsername(Username);
-			user.addPassword(password);
+			User.addUsername(Username);
+			User.addPassword(password);
 			
 			return user;
 		}
@@ -36,7 +36,7 @@ public class Databases
 	}
 	public List<Show> getShow(String name)
 	{
-		return user.getShows();
+		return User.getShows();
 	}
 	
 	
