@@ -11,20 +11,28 @@ public class Show {
 	private static int myNumOfSeasons;
 	private static List<String> myEpisodes;
 	private static int mySeason;
-	
+	private static List<String> myComments;
+	private static String myShow;
 	//CONSTRUCTORS
 	//----------------------------------------------------------------
-	public Show(String Name, String Info, int NumOfSeasons, List<String> Episodes, int Season)
+	public Show(String Name, String Info, int NumOfSeasons, List<String> Episodes, int Season, List<String> Comments)
 	{
 		myName = Name;
 		myInfo = Info;
 		myNumOfSeasons = NumOfSeasons;
 		myEpisodes = Episodes;
 		mySeason = Season;
+		myComments = Comments;
+		myShow = Show;
 		
 	}
 	//METHODS
 	//----------------------------------------------------------------
+	
+	public String getShow( String Name)
+	{
+		return myShow;
+	}
 	
 	public String getName()
 	{
@@ -47,26 +55,25 @@ public class Show {
 		return myEpisodes;
 	}
 	
-	public List<String> getEpisodes(int Season)
-	{
-		return mySeason;
-	}
-	
 	public List<String> getComments(String username)
 	{
-		
+		return myComments;
 	}
 	
-	public void isSeason(int season)
+	public boolean isSeason(int season)
+	{
+		return season>0 && season<=myNumOfSeasons;
+	}
+	
+	public int getSeason(int num)
 	{
 		return mySeason;
 	}
 	
-	public Season getSeason(int num)
+	public String setName(String x)
 	{
-		
+		return myName = x;
 	}
-	
 	public static void main(String[] args)
 	{
 		
