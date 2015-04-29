@@ -6,6 +6,7 @@ public class Databases
 	private String Username;
 	private String Password;
 	private String name;
+	private User user;
 	public void Database()
 	{
 		Username="";
@@ -27,12 +28,17 @@ public class Databases
 	{
 		if(User.getUsername()==Username &&	User.getPassword() ==Password)
 		{
-			return User();
+			user=new User();
+			user.addUsername(Username);
+			user.addPassword(password);
+			
+			return user;
 		}
+		return null;
 	}
-	public Show getShow(String name)
+	public List<Show> getShow(String name)
 	{
-		return myShows;
+		return user.getShows();
 	}
 	
 	

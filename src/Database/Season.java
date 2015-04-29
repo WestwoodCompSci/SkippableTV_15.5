@@ -1,57 +1,63 @@
 package Database;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Season {
 
 	private List<String> comments;
+	private static List<Episode> episodes;
 	private String summary;
 	private int length;
 	private int numOfEpisodes;
+	private static int seasonNum;
 	
-		public void setComments()
-		{
-			
-		}
-		public void setSummary()
-		{
-		}
-		public void setSeasonLength()
-		{
-		}
-		public void setNumOfEpisodes()
-		{
-		}
-		public int getSeason(String show)
-		{
 		
+		public  void setSummary(String sum)
+		{
+			summary = sum;
+		}
+		public  void setSeasonLength(int seasonLength)
+		{
+			length = seasonLength;
+		}
+		public  void setNumOfEpisodes(int num)
+		{
+			numOfEpisodes = num;
 		}
 		
-		public String getInfo()
+		public void setSeasonNum(int num)
+		{
+			seasonNum = num;
+		}
+		
+		public void setListOfEpisodes(List<Episode> thing)
+		{
+			episodes = thing;
+		}
+		
+		public  String getInfo()
 		{
 			return summary;
 		}
 		
 		
-		public List<String> getEpisodes()
+		public static List<Episode> getEpisodes()
 		{
-		//	return Show.getEpisodes();
+			return episodes;
 		}
 		
-		public List<String> getEpisodes(int season)
+		
+		public static List<String> getComments(String username)
 		{
-			
+			List<String> L = new ArrayList<String>();
+			return L;
 		}
 		
-		public List<String> getComments(String username)
+		public static int getProgress(String username)
 		{
 			
-		}
-		
-		public int getProgress(String username)
-		{
-			
-			
+			return 1;
 		}
 	}
 	

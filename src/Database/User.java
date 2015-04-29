@@ -8,6 +8,7 @@ public class User {
 	private static  String password;
 	private  static List<Show> myShows;
 	private static  String email;
+	private static List<Episode> episodeswatched;
 	
 	public User()
 	{
@@ -39,6 +40,11 @@ public class User {
 		return thing;
 	}
 	
+	public static void addEpisodeWatched(Episode thing)
+	{
+		episodeswatched.add(thing);
+	}
+	
 	public static  String addShow(Show show)
 	{
 		String thing = show.getName();
@@ -65,8 +71,10 @@ public class User {
 		return password;
 	}
 	
-	
-	
+	public static List<Episode> getEpisodesWatched()
+	{
+		return episodeswatched;
+	}
 	
 	
 }
