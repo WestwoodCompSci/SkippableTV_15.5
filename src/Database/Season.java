@@ -52,10 +52,23 @@ public class Season {
 			return L;
 		}
 		
-		public static int getProgress(String username)
+		public static double getProgress(User user)
 		{
+			double prog = 0;
+			double tot = (double)episodes.size();
+			for(int i = 0; i< episodes.size(); i++)
+			{
+				for(int j = 0; j< user.getEpisodesWatched().size(); j++)
+				{
+					if(episodes.get(i).equals(user.getEpisodesWatched().get(j)))
+					{
+						prog++;
+					}
+				}
+			}
 			
-			return 1;
+			double progress = (prog/tot)*100;
+			return progress;
 		}
 	}
 	
