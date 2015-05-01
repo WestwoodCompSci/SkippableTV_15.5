@@ -1,5 +1,11 @@
 package Database;
 import java.util.*;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+
+
 public class Databases 
 {
 	//FIELDS TODO
@@ -39,7 +45,11 @@ public class Databases
 		return User.getShows();
 	}
 	
-	
+	public void appendtoDatabaseFile(Show myShow,Season mySeason,Episode myEpisode)
+	{
+		File database=new File("Database.txt");
+		
+	}
 	
 	
 	
