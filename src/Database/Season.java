@@ -45,7 +45,7 @@ public class Season {
 		}
 		
 		
-		public static List<String> getComments(String username)
+		public static List<String> getComments(User user)
 		{
 			List<String> L = new ArrayList<String>();
 			L.addAll(comments);
