@@ -128,6 +128,34 @@ public class Databases
 		}
 	
 	}
+	
+	public static void addUsertoCredentials(String username, String password){
+		String filename = "credentials.txt";
+		FileWriter fw = new FileWriter(filename, true);
+		BufferedWriter bw = new BufferedWriter(fw);
+		Encoder thing = new Encoder(filename);
+		bw.write(username + " , ");
+		thing.write(password);
+		bw.write("\n");
+		
+		bw.close();
+	}
+	
+	public static void addUsertoUserFile(String username, String email, List<Show> mines, List<Episode> ep) throws IOException{
+		String filename = "users.txt";
+		FileWriter fw = new FileWriter(filename, true);
+		BufferedWriter bw = new BufferedWriter(fw);
+		bw.write(username + "\n" + email + "\n[Show:");
+		for (int i = 0; i < mines.size(); i ++)
+		{	
+			bw.write("(" + mines.get(i).getName() + ")");
+		}
+		bw.write("] \n" +  "[EpisodesWatched:");
+		for (int j = 0; j< ep.size(); j ++)
+		{
+			bw.write("(" + ep.get(j).getEpisodeName() + ")");
+		}	
+	}
 	}
 	
 
