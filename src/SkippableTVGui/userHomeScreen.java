@@ -42,13 +42,13 @@ public class userHomeScreen {
 		logoBox.add(blurb);
 		loginBox.add(loginButton);
 		
-		//bigBox.add(logoBox);
+		bigBox.add(logoBox);
 		bigBox.add(loginBox);
 		
 		
 		 
 		
-		//myFrame.add(bigBox);
+		myFrame.add(bigBox);
 		myFrame.pack();
 		myFrame.setVisible(true);	
 		
