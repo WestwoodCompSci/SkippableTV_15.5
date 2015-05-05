@@ -6,7 +6,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-
+import Encoder.*;
 
 public class Databases 
 {
@@ -32,11 +32,11 @@ public class Databases
 	}
 	public User getUser(String Username, String password)
 	{
-		if(User.getUsername()==Username &&	User.getPassword() ==Password)
+		if(user.getUsername()==Username &&	user.getPassword() ==Password)
 		{
 			user=new User();
-			User.addUsername(Username);
-			User.addPassword(password);
+			user.addUsername(Username);
+			user.addPassword(password);
 			
 			return user;
 		}
@@ -44,7 +44,7 @@ public class Databases
 	}
 	public List<Show> getShow(String name)
 	{
-		return User.getShows();
+		return user.getShows();
 	}
 	
 	public void appendtoDatabaseFile(Show myShow,Season mySeason,Episode myEpisode)
@@ -139,14 +139,20 @@ public class Databases
 	
 	public static void addUsertoCredentials(String username, String password){
 		String filename = "credentials.txt";
-		FileWriter fw = new FileWriter(filename, true);
-		BufferedWriter bw = new BufferedWriter(fw);
-		Encode thing = new Encode(filename);
-		bw.write(username + " , ");
-		thing.write(password);
-		bw.write("\n");
-		
-		bw.close();
+		FileWriter fw;
+		try {
+			fw = new FileWriter(filename, true);
+			BufferedWriter bw = new BufferedWriter(fw);
+			Encode thing = new Encode(filename);
+			bw.write(username + " , ");
+			thing.write(password);
+			bw.write("\n");
+			
+			bw.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	public static void addUsertoUserFile(String username, String email, List<Show> mines, List<Episode> ep) throws IOException{
