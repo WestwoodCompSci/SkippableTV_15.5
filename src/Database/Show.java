@@ -65,22 +65,14 @@ public class Show {
 		return mySeason;
 	}
 	
-	public String setName(String x)
+	public static String setName(String x)
 	{
 		return myName = x;
 	}
-<<<<<<< HEAD
-	
-	public static void main(String[] args) 
-=======
-	public static void main(String[] args)
->>>>>>> origin/master
-	{
-		
-	}
 
-	public static void setName(String showname) {
-		// TODO Auto-generated method stub
+	public static void main(String[] args)
+
+	{
 		
 	}
 

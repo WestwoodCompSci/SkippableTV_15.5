@@ -47,7 +47,8 @@ public class DataEntry {
 			 		JSONParser parser = new JSONParser();
 			 		JSONObject jsonObj = (JSONObject) parser.parse(reader);
 			 		String showname = (String) jsonObj.get("epguide_name");
-			 		Show.setName(showname);
+			 		System.out.println(showname);
+			 		//Show.setName(showname);
 			 		int numofseasons;
 			 		int numofeps=0;
 			 		List<Integer> seasons = null;
