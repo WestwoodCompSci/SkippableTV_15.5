@@ -69,23 +69,10 @@ public class Show {
 	{
 		return myName = x;
 	}
-<<<<<<< HEAD
-	
-	public static void main(String[] args) 
-=======
-	public static void main(String[] args)
->>>>>>> origin/master
-	{
-		
-	}
 
-	public static void setName(String showname) {
-		// TODO Auto-generated method stub
-		
-	}
 
-	public static void setNumofSeasons(int numofseasons) {
-		// TODO Auto-generated method stub
+	public void setNumofSeasons(int numofseasons) {
+		myNumOfSeasons = numofseasons;
 		
 	}
 }
