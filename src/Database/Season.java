@@ -45,17 +45,30 @@ public class Season {
 		}
 		
 		
-		public static List<String> getComments(String username)
+		public static List<String> getComments(User user)
 		{
 			List<String> L = new ArrayList<String>();
 			L.addAll(comments);
 			return L;
 		}
 		
-		public static int getProgress(String username)
+		public static double getProgress(User user)
 		{
+			double prog = 0;
+			double tot = (double)episodes.size();
+			for(int i = 0; i< episodes.size(); i++)
+			{
+				for(int j = 0; j< user.getEpisodesWatched().size(); j++)
+				{
+					if(episodes.get(i).equals(user.getEpisodesWatched().get(j)))
+					{
+						prog++;
+					}
+				}
+			}
 			
-			return 1;
+			double progress = (prog/tot)*100;
+			return progress;
 		}
 		public static void setNumofEps(int numofeps) {
 			// TODO Auto-generated method stub

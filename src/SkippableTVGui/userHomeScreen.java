@@ -1,10 +1,12 @@
 package SkippableTVGui;
 import java.awt.Dimension;
-import java.awt.Image;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.Box;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.SwingUtilities;
@@ -20,6 +22,7 @@ public class userHomeScreen {
 		myFrame.setPreferredSize(new Dimension(1440,850));
 		Box bigBox = Box.createVerticalBox();
 		
+		Box loginBox = Box.createHorizontalBox();
 		Box logoBox = Box.createHorizontalBox();
 		JLabel logoLabel = new JLabel();
 		Icon logo = new ImageIcon("skippyHomeScreen.png");
@@ -27,12 +30,23 @@ public class userHomeScreen {
 		
 		JLabel blurb = new JLabel("SkippableTV is an awesome program.");
 		
+		JButton loginButton = new JButton("Login");
+		loginButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+			}
+		});
+		
 		
 		logoBox.add(logoLabel);
-		logoBox.createVerticalStrut(500);
 		logoBox.add(blurb);
-		bigBox.add(logoBox);
+		loginBox.add(loginButton);
 		
+		bigBox.add(logoBox);
+		bigBox.add(loginBox);
+		
+		
+		 
 		
 		myFrame.add(bigBox);
 		myFrame.pack();

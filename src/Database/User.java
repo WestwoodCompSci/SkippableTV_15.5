@@ -1,5 +1,6 @@
 package Database;
 
+import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
@@ -82,33 +83,6 @@ public class User {
 		return episodeswatched;
 	}
 	
-	public static void addUsertoCredentials(String username, String password){
-		String filename = "credentials.txt";
-		FileWriter fw = new FileWriter(filename, true);
-		Encoder thing = new Encoder(filename);
-		fw.write(username + " , ");
-		thing.write(password);
-		fw.write("\n");
-		
-	}
-	
-	public static void addUsertoUserFile(String username, String email, List<Show> mines, List<Episode> ep) throws IOException{
-		String filename = "users.txt";
-		fw = new FileWriter(filename, true);
-		fw.write(username + "\n" + email + "\n[Show:");
-		for (int i = 0; i < mines.size(); i ++)
-		{
-			String name = mines.get(i).getName();
-			String info = mines.get(i).getInfo();
-			Integer seasons = mines.get(i).getNumOfSeasons();
-			
-			
-			fw.write("(" + name + info + seasons + ")");
-		}
-		
-		
-		
-		
-	}
+
 	
 }
