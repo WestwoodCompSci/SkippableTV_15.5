@@ -5,10 +5,10 @@ import java.util.List;
 public class Episode {
 	
 
-	private static String episodeName;
-	private static String episodeInfo;
-	private static int skippability; 
-	private static int numEpisode;
+	private  String episodeName;
+	private  String episodeInfo;
+	private  int skippability; 
+	private  int numEpisode;
 
 		public Episode()
 		{
@@ -18,25 +18,25 @@ public class Episode {
 			numEpisode = 0;
 		}
 	
-	public static String getEpisodeName()
+	public  String getEpisodeName()
 	{
 		return episodeName;
 		
 	}
 	
-	public  static String getEpisodeInfo()
+	public   String getEpisodeInfo()
 	{
 		return episodeInfo;
 	}
 	
-	public static int getSkippability()
+	public  int getSkippability()
 	{
 		return skippability;
 	}
 	
 
 	
-	public static int getNumEpisode()
+	public  int getNumEpisode()
 	{
 		return numEpisode;
 	}

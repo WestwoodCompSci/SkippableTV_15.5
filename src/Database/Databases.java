@@ -87,8 +87,14 @@ public class Databases
  
 			FileWriter fw = new FileWriter(file.getAbsoluteFile());
 			BufferedWriter bw = new BufferedWriter(fw);
-			bw.write(mySeason.getComments(username));
-			bw.write(mySeason.getEpisodes(List<String>thing));
+			for(String s : mySeason.getComments(user))
+			bw.write(s + "\n");
+			for(Episode j : mySeason.getEpisodes()){
+				bw.write(j.getEpisodeName());
+				bw.write(j.getEpisodeInfo());
+				bw.write(j.getSkippability());
+				bw.write(j.getNumEpisode());
+			}
 			
 			bw.write(mySeason.getInfo());
 
@@ -116,9 +122,11 @@ public class Databases
 			bw.write(myShow.getName());
 			bw.write(myShow.getInfo());
 			bw.write(myShow.getNumOfSeasons());
-			bw.write(myShow.getEpisodes(List<String>Show));
+			for(String j : myShow.getEpisodes())
+			bw.write(j + "\n");
 			bw.write(myShow.getSeason(0));
-			bw.write(myShow.getComments(Username));
+			for(String s: myShow.getComments(Username))
+			bw.write(s + "/n");
 			bw.close();
  
 			System.out.println("Done");
@@ -133,7 +141,7 @@ public class Databases
 		String filename = "credentials.txt";
 		FileWriter fw = new FileWriter(filename, true);
 		BufferedWriter bw = new BufferedWriter(fw);
-		Encoder thing = new Encoder(filename);
+		Encode thing = new Encode(filename);
 		bw.write(username + " , ");
 		thing.write(password);
 		bw.write("\n");

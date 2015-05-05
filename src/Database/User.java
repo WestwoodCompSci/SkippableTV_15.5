@@ -7,12 +7,12 @@ import java.util.List;
 
 public class User {
 
-	private static  String name;
-	private static  String password;
-	private  static List<Show> myShows;
-	private static  String email;
-	private static List<Episode> episodeswatched;
-	private static FileWriter fw;
+	private   String name;
+	private   String password;
+	private   List<Show> myShows;
+	private   String email;
+	private  List<Episode> episodeswatched;
+	private  FileWriter fw;
 	
 	
 	
@@ -24,7 +24,7 @@ public class User {
 		email = null;
 	}
 	
-	public static String addPassword(String password)
+	public  String addPassword(String password)
 	{
 		String thing = password;
 		//new Encoder hi = Encoder("credentials.txt");
@@ -32,7 +32,7 @@ public class User {
 		return thing;
 	}
 	
-	public static String addUsername(String username)
+	public  String addUsername(String username)
 	{
 		String thing = username;
 		//new Encoder hi = Encoder("credentials.txt");
@@ -40,45 +40,45 @@ public class User {
 		return thing;
 	}
 	
-	public static  String addUserEmail(String email)
+	public   String addUserEmail(String email)
 	{
 		String thing = email;
 		//add to text file
 		return thing;
 	}
 	
-	public static void addEpisodeWatched(Episode thing)
+	public  void addEpisodeWatched(Episode thing)
 	{
 		episodeswatched.add(thing);
 	}
 	
-	public static  String addShow(Show show)
+	public   String addShow(Show show)
 	{
 		String thing = show.getName();
 		//add show to text file
 		return thing;
 	}
 	
-	public static  List<Show> getShows(){
+	public   List<Show> getShows(){
 		return myShows;
 	}
 	
-	public static  String getEmail()
+	public   String getEmail()
 	{
 		return email;
 	}
 	
-	public static  String getUsername()
+	public   String getUsername()
 	{
 		return name;
 	}
 	
-	public static  String getPassword()
+	public   String getPassword()
 	{
 		return password;
 	}
 	
-	public static List<Episode> getEpisodesWatched()
+	public  List<Episode> getEpisodesWatched()
 	{
 		return episodeswatched;
 	}

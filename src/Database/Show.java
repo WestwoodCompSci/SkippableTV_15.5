@@ -6,12 +6,12 @@ public class Show {
 	
 	//FIELDS
 	//---------------------------------------------------------------
-	private static String myName;
-	private static String myInfo;
-	private static int myNumOfSeasons;
-	private static List<String> myEpisodes;
-	private static int mySeason;
-	private static List<String> myComments;
+	private  String myName;
+	private  String myInfo;
+	private  int myNumOfSeasons;
+	private  List<String> myEpisodes;
+	private  int mySeason;
+	private  List<String> myComments;
 	
 	//CONSTRUCTORS
 	//----------------------------------------------------------------
@@ -28,10 +28,6 @@ public class Show {
 	//METHODS
 	//----------------------------------------------------------------
 	
-	public Show getShow( String Name)
-	{
-		//parses through the text file looking for the name of a show
-	}
 	
 	public String getName()
 	{

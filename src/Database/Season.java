@@ -5,12 +5,12 @@ import java.util.List;
 
 public class Season {
 
-	private static List<String> comments;
-	private static List<Episode> episodes;
+	private  List<String> comments;
+	private  List<Episode> episodes;
 	private String summary;
 	
 	private int numOfEpisodes;
-	private static int seasonNum;
+	private  int seasonNum;
 	
 		
 		public  void setSummary(String sum)
@@ -39,20 +39,20 @@ public class Season {
 		}
 		
 		
-		public static List<Episode> getEpisodes()
+		public  List<Episode> getEpisodes()
 		{
 			return episodes;
 		}
 		
 		
-		public static List<String> getComments(User user)
+		public  List<String> getComments(User user)
 		{
 			List<String> L = new ArrayList<String>();
 			L.addAll(comments);
 			return L;
 		}
 		
-		public static double getProgress(User user)
+		public  double getProgress(User user)
 		{
 			double prog = 0;
 			double tot = (double)episodes.size();
