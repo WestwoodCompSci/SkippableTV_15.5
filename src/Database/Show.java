@@ -65,9 +65,9 @@ public class Show {
 		return mySeason;
 	}
 	
-	public static String setName(String x)
+	public void setName(String x)
 	{
-		return myName = x;
+		 myName = x;
 	}
 
 	public static void main(String[] args)
