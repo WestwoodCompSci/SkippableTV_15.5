@@ -62,7 +62,8 @@ public class DataEntry {
 			 		List<String> epnames = null; 
 			 		epnames.add((String) jsonObj.get("name")); 
 				 }
-		}catch(Exception e){
+		}
+		catch(Exception e){
 			
 		}
 	

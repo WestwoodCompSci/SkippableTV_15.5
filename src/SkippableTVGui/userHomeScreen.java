@@ -7,6 +7,7 @@ import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.SwingUtilities;
 
 
 public class userHomeScreen {
@@ -17,17 +18,33 @@ public class userHomeScreen {
 		myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		myFrame.setLocation(0,0);
 		myFrame.setPreferredSize(new Dimension(1440,850));
+		Box bigBox = Box.createVerticalBox();
 		
-		Icon logo = new ImageIcon("skippy.png");
-		JLabel logoLabel = new JLabel(logo);
-		Box topBox = Box.createHorizontalBox();
-		topBox.add(logoLabel);
-		myFrame.add(topBox);
+		Box logoBox = Box.createHorizontalBox();
+		JLabel logoLabel = new JLabel();
+		Icon logo = new ImageIcon("skippyHomeScreen.png");
+		logoLabel.setIcon(logo);
 		
+		JLabel blurb = new JLabel("SkippableTV is an awesome program.");
+		
+		
+		logoBox.add(logoLabel);
+		logoBox.createVerticalStrut(500);
+		logoBox.add(blurb);
+		bigBox.add(logoBox);
+		
+		
+		myFrame.add(bigBox);
 		myFrame.pack();
 		myFrame.setVisible(true);	
 		
 		//link to homeScreen (via logout)
+	}
+	public static void main(String[] args)
+	{
+		SwingUtilities.invokeLater(new Runnable() {
+			public void run() { new userHomeScreen(); }
+		});
 	}
 	
 }

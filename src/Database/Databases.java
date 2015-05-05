@@ -17,20 +17,18 @@ public class Databases
 	public String lookupPassword(String Password)
 	{
 		return Password;
-		
 	}
 	public String lookupUsername(String Username)
 	{
 		return Username;
-
 	}
 	public User getUser(String Username, String password)
 	{
 		if(User.getUsername()==Username &&	User.getPassword() ==Password)
 		{
 			user=new User();
-			user.addUsername(Username);
-			user.addPassword(password);
+			User.addUsername(Username);
+			User.addPassword(password);
 			
 			return user;
 		}
@@ -38,7 +36,7 @@ public class Databases
 	}
 	public List<Show> getShow(String name)
 	{
-		return user.getShows();
+		return User.getShows();
 	}
 	
 	

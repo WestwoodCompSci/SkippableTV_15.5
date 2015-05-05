@@ -11,20 +11,27 @@ public class Show {
 	private static int myNumOfSeasons;
 	private static List<String> myEpisodes;
 	private static int mySeason;
+	private static List<String> myComments;
 	
 	//CONSTRUCTORS
 	//----------------------------------------------------------------
-	public Show(String Name, String Info, int NumOfSeasons, List<String> Episodes, int Season)
+	public Show(String Name, String Info, int NumOfSeasons, List<String> Episodes, int Season, List<String> Comments)
 	{
 		myName = Name;
 		myInfo = Info;
 		myNumOfSeasons = NumOfSeasons;
 		myEpisodes = Episodes;
 		mySeason = Season;
+		myComments = Comments;
 		
 	}
 	//METHODS
 	//----------------------------------------------------------------
+	
+	public Show getShow( String Name)
+	{
+		//parses through the text file looking for the name of a show
+	}
 	
 	public String getName()
 	{
@@ -47,27 +54,31 @@ public class Show {
 		return myEpisodes;
 	}
 	
-	public List<String> getEpisodes(int Season)
-	{
-		return mySeason;
-	}
-	
 	public List<String> getComments(String username)
 	{
-		
+		return myComments;
 	}
 	
-	public void isSeason(int season)
+	public boolean isSeason(int season)
+	{
+		return season>0 && season<=myNumOfSeasons;
+	}
+	
+	public int getSeason(int num)
 	{
 		return mySeason;
 	}
 	
-	public Season getSeason(int num)
+	public String setName(String x)
 	{
-		
+		return myName = x;
 	}
+<<<<<<< HEAD
 	
 	public static void main(String[] args) 
+=======
+	public static void main(String[] args)
+>>>>>>> origin/master
 	{
 		
 	}

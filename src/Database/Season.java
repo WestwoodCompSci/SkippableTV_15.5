@@ -5,10 +5,10 @@ import java.util.List;
 
 public class Season {
 
-	private List<String> comments;
+	private static List<String> comments;
 	private static List<Episode> episodes;
 	private String summary;
-	private int length;
+	
 	private int numOfEpisodes;
 	private static int seasonNum;
 	
@@ -17,10 +17,7 @@ public class Season {
 		{
 			summary = sum;
 		}
-		public  void setSeasonLength(int seasonLength)
-		{
-			length = seasonLength;
-		}
+		
 		public  void setNumOfEpisodes(int num)
 		{
 			numOfEpisodes = num;
@@ -51,6 +48,7 @@ public class Season {
 		public static List<String> getComments(String username)
 		{
 			List<String> L = new ArrayList<String>();
+			L.addAll(comments);
 			return L;
 		}
 		

@@ -1,5 +1,7 @@
 package Database;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.List;
 
 public class User {
@@ -9,6 +11,9 @@ public class User {
 	private  static List<Show> myShows;
 	private static  String email;
 	private static List<Episode> episodeswatched;
+	private static FileWriter fw;
+	
+	
 	
 	public User()
 	{
@@ -21,21 +26,22 @@ public class User {
 	public static String addPassword(String password)
 	{
 		String thing = password;
-		//encrypt thing
+		//new Encoder hi = Encoder("credentials.txt");
+		//hi.write(password)
 		return thing;
 	}
 	
 	public static String addUsername(String username)
 	{
 		String thing = username;
-		//encrypt thing
+		//new Encoder hi = Encoder("credentials.txt");
+		//hi.write(username);
 		return thing;
 	}
 	
 	public static  String addUserEmail(String email)
 	{
 		String thing = email;
-		//encrypt email
 		//add to text file
 		return thing;
 	}
@@ -76,5 +82,33 @@ public class User {
 		return episodeswatched;
 	}
 	
+	public static void addUsertoCredentials(String username, String password){
+		String filename = "credentials.txt";
+		FileWriter fw = new FileWriter(filename, true);
+		Encoder thing = new Encoder(filename);
+		fw.write(username + " , ");
+		thing.write(password);
+		fw.write("\n");
+		
+	}
+	
+	public static void addUsertoUserFile(String username, String email, List<Show> mines, List<Episode> ep) throws IOException{
+		String filename = "users.txt";
+		fw = new FileWriter(filename, true);
+		fw.write(username + "\n" + email + "\n[Show:");
+		for (int i = 0; i < mines.size(); i ++)
+		{
+			String name = mines.get(i).getName();
+			String info = mines.get(i).getInfo();
+			Integer seasons = mines.get(i).getNumOfSeasons();
+			
+			
+			fw.write("(" + name + info + seasons + ")");
+		}
+		
+		
+		
+		
+	}
 	
 }
