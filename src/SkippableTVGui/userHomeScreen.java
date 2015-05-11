@@ -44,6 +44,7 @@ public class userHomeScreen {
 		loginBox.add(loginButton);
 		
 		bigBox.add(logoBox);
+		
 		bigBox.add(loginBox);
 		
 		

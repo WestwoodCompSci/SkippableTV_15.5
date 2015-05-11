@@ -26,6 +26,8 @@ import javax.swing.SwingUtilities;
 public class loginScreen {
 	
 	private JFrame myLoginFrame;
+	private String username;
+	private String password;
 	
 	public loginScreen()
 	{
@@ -125,8 +127,8 @@ public class loginScreen {
 		
 		login.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String username = usernameText.getText();
-				String password = passwordText.getText();
+				username = usernameText.getText();
+				password = passwordText.getText();
 				
 				//Server server = new Server();
 				//boolean valid = server.authenticate(username,password);
@@ -151,11 +153,17 @@ public class loginScreen {
 		myLoginFrame.setResizable(false);
 
 	}
+	public String getUsername(){
+		return username;
+	}
+	public String getPassword(){
+		return password;
+	}
 	
 	public static void main(String[] args)
 	{
 		SwingUtilities.invokeLater(new Runnable() {
-			public void run() { new userHomeScreen(); }
+			public void run() { new loginScreen(); }
 		});
 	}
 }
