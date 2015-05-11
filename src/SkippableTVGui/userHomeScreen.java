@@ -22,29 +22,27 @@ public class userHomeScreen {
 		myFrame.setPreferredSize(new Dimension(1440,850));
 		Box bigBox = Box.createVerticalBox();
 		
-		Box loginBox = Box.createHorizontalBox();
-		Box logoBox = Box.createHorizontalBox();
+		Box topBox = Box.createHorizontalBox();
 		JLabel logoLabel = new JLabel();
 		Icon logo = new ImageIcon("skippyHomeScreen.png");
 		logoLabel.setIcon(logo);
 		
 		JLabel blurb = new JLabel("SkippableTV is an awesome program.");
 		
-		JButton loginButton = new JButton("Login");
-		loginButton.addActionListener(new ActionListener() {
+		JButton logoutButton = new JButton("Logout");
+		logoutButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
 			}
 		});
 		
 		
-		logoBox.add(logoLabel);
-		logoBox.add(blurb);
+		topBox.add(logoLabel);
+		topBox.add(blurb);
+		topBox.add(Box.createHorizontalStrut(1000));
+		topBox.add(logoutButton);
 		
-		loginBox.add(loginButton);
-		
-		bigBox.add(logoBox);
-		bigBox.add(loginBox);
+		bigBox.add(topBox);
 		
 		
 		 
