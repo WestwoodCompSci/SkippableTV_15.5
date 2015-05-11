@@ -64,7 +64,7 @@ public class DataEntry {
 				 }
 		}
 		catch(Exception e){
-			
+			e.printStackTrace();
 		}
 	
 	}
