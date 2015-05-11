@@ -40,6 +40,7 @@ public class userHomeScreen {
 		
 		logoBox.add(logoLabel);
 		logoBox.add(blurb);
+		
 		loginBox.add(loginButton);
 		
 		bigBox.add(logoBox);
