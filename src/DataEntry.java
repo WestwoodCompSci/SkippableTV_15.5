@@ -60,7 +60,7 @@ public class DataEntry {
 			 		Season.setNumofEps(numofeps);
 			 		List<String> epnames = null; 
 			 		epnames.add((String) jsonObj.get("name"));
-			 		Show Sherlock = new Show(showname, null, numofseasons, null, 0, null);
+			 		Show show = new Show(showname, null, numofseasons, null, 0, null);
 				 }
 		}
 		catch(Exception e){
