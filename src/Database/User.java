@@ -27,23 +27,21 @@ public class User {
 	public  String addPassword(String password)
 	{
 		String thing = password;
-		//new Encoder hi = Encoder("credentials.txt");
-		//hi.write(password)
+		
 		return thing;
 	}
 	
 	public  String addUsername(String username)
 	{
 		String thing = username;
-		//new Encoder hi = Encoder("credentials.txt");
-		//hi.write(username);
+		
 		return thing;
 	}
 	
 	public   String addUserEmail(String email)
 	{
 		String thing = email;
-		//add to text file
+	
 		return thing;
 	}
 	
@@ -55,31 +53,35 @@ public class User {
 	public   String addShow(Show show)
 	{
 		String thing = show.getName();
-		//add show to text file
 		return thing;
 	}
 	
 	public   List<Show> getShows(){
+		
 		return myShows;
 	}
 	
 	public   String getEmail()
 	{
+		
 		return email;
 	}
 	
 	public   String getUsername()
 	{
+		
 		return name;
 	}
 	
 	public   String getPassword()
 	{
+		
 		return password;
 	}
 	
 	public  List<Episode> getEpisodesWatched()
 	{
+		
 		return episodeswatched;
 	}
 	
