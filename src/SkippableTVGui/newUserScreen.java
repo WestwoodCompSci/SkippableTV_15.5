@@ -25,7 +25,7 @@ import javax.swing.SwingUtilities;
 public class newUserScreen {
 	
 	private JFrame myNewUserFrame;
-	
+	// Network myNetwork = new Network();
 	public newUserScreen()
 	{
 		myNewUserFrame = new JFrame("SkippableTV");
