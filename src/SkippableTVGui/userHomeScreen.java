@@ -9,6 +9,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 
 import Database.User;
@@ -29,24 +30,35 @@ public class userHomeScreen {
 		Icon logo = new ImageIcon("skippyHomeScreen.png");
 		logoLabel.setIcon(logo);
 		
+		
 		JLabel blurb = new JLabel("SkippableTV is an awesome program.");
 		
 		JButton logoutButton = new JButton("Logout");
 		logoutButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				myFrame.dispose();
+				new homeScreen();
 				
 			}
 		});
 		
-		
-		
 		topBox.add(logoLabel);
 		topBox.add(blurb);
-		topBox.add(Box.createHorizontalStrut(1000));
+		topBox.add(Box.createVerticalStrut(100));
 		topBox.add(logoutButton);
-		
 		bigBox.add(topBox);
 		
+		Box secondBox = Box.createHorizontalBox();
+		JLabel showLabel = new JLabel("Shows");
+		JButton searchButton= new JButton("Search");
+		JTextField searchInput = new JTextField();
+		searchInput.setPreferredSize(new Dimension(100, 100));
+		secondBox.add(showLabel);
+		secondBox.add(Box.createVerticalStrut(100));
+		secondBox.add(searchButton);
+		secondBox.add(searchInput);
+		bigBox.add(Box.createVerticalStrut(10));
+		bigBox.add(secondBox);
 		
 		 
 		
