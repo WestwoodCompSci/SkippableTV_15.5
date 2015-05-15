@@ -3,9 +3,13 @@ import java.util.*;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import Encoder.*;
 
 public class Databases 
@@ -170,6 +174,40 @@ public class Databases
 			bw.write("(" + ep.get(j).getEpisodeName() + ")");
 		}	
 	}
+	void loadData()
+	{
+			try {
+				FileInputStream in = new FileInputStream("database.txt");
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			List<String> info = new ArrayList<String>();
+			List<String> episodeSeasons = new ArrayList<String>();
+			List<String> skippability = new ArrayList<String>(); 
+			try {
+			BufferedReader	br = new BufferedReader(new FileReader("database.txt"));
+			String strLine;
+			try {
+				info.add(br.readLine());
+				episodeSeasons.add(br.readLine());
+				skippability.add(br.readLine());
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				
+
+			}
+		
+			   
+		}
+	
+	
 	}
+	
 	
 
