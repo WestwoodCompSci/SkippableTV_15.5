@@ -38,7 +38,7 @@ public class userHomeScreen {
 			}
 		});
 		
-		JLabel username = new JLabel(Server.getUser(loginScreen.getUsername(), loginScreen.getPassword()));
+		
 		
 		topBox.add(logoLabel);
 		topBox.add(blurb);
