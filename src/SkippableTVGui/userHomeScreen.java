@@ -11,6 +11,8 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.SwingUtilities;
 
+import Database.User;
+
 
 public class userHomeScreen {
 	private JFrame myFrame;
@@ -36,6 +38,7 @@ public class userHomeScreen {
 			}
 		});
 		
+		JLabel username = new JLabel(Server.getUser(loginScreen.getUsername(), loginScreen.getPassword()));
 		
 		topBox.add(logoLabel);
 		topBox.add(blurb);

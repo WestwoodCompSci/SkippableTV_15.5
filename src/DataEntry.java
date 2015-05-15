@@ -47,7 +47,7 @@ public class DataEntry {
 			 		JSONParser parser = new JSONParser();
 			 		JSONObject jsonObj = (JSONObject) parser.parse(reader);
 			 		String showname = (String) jsonObj.get("epguide_name");
-			 		Show.setName(showname);
+			 		String summary = (String) jsonObj.get("summary");
 			 		int numofseasons;
 			 		int numofeps=0;
 			 		List<Integer> seasons = null;
@@ -57,10 +57,10 @@ public class DataEntry {
 			 			numofeps++;
 			 		}
 			 		numofseasons = seasons.get(seasons.size());
-			 		Show.setNumofSeasons(numofseasons);
 			 		Season.setNumofEps(numofeps);
 			 		List<String> epnames = null; 
-			 		epnames.add((String) jsonObj.get("name")); 
+			 		epnames.add((String) jsonObj.get("name"));
+			 		Show Sherlock = new Show(showname, null, numofseasons, null, 0, null);
 				 }
 		}
 		catch(Exception e){
