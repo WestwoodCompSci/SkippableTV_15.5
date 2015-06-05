@@ -27,7 +27,7 @@ public class Show {
 	}
 	//METHODS
 	//----------------------------------------------------------------
-	
+
 	
 	public String getName()
 	{
